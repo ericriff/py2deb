@@ -11,8 +11,8 @@ This works with packages pulled from `pypi` (just specify the name) or with loca
 $ docker build -t py2deb:1 .
 
 # Creating deb package of pipenv-shebang as an example.
-$ docker run -it --rm -v $(pwd):/build py2deb:1 pipenv-shebang
+$ docker run -it --rm -v $(pwd):/build py2deb:1 -r . -- pipenv-shebang
 
 # Creating deb package of a local project.
-$ docker run -it --rm -v $(pwd):/build py2deb:1 path-to-project
+$ docker run -it --rm -v $(pwd):/build py2deb:1 -r . -- path-to-project
 ```

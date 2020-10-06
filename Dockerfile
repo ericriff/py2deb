@@ -5,5 +5,5 @@ RUN pip install py2deb \
     && apt-get clean
 
 WORKDIR /build
-ENTRYPOINT ["py2deb","-r",".","--"]
+ENTRYPOINT ["py2deb"]
 
